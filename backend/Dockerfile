@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY  backend/ .
 
 # Run training/verification to ensure model artifact is up to date
 RUN python train_and_save_model.py
